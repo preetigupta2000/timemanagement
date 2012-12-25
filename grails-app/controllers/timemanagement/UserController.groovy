@@ -7,6 +7,7 @@ class UserController {
     def login = {}
 
 	def authenticate = {
+		
 		def user = User.findByLoginAndPassword(params.login, params.password)
 		if(user){
 		  session.user = user
