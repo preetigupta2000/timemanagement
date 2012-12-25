@@ -1,5 +1,5 @@
 
-<%@ page import="fonantrix.User" %>
+<%@ page import="timemanagement.User" %>
 <!doctype html>
 <html>
 	<head>
