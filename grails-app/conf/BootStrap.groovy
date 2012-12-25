@@ -1,4 +1,4 @@
-import timemanagement.*
+import timemanagement.User
 import grails.util.GrailsUtil
 
 class BootStrap {
