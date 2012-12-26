@@ -7,7 +7,7 @@ class BootStrap {
     def init = { servletContext ->
     switch(GrailsUtil.environment){
       case "development":
-        def admin = new User(login:"admin", password:"admin123", name:"bhupender")
+        def admin = new User(login:"admin", password:"admin123", name:"Administrator")
        
         admin.save()
         
