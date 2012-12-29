@@ -21,24 +21,22 @@
         </div>
         <div class="span5">
 			<div class="login-panel">
-				<form class="well" action="userlogin.html" method="post"  accept-charset="utf-8" enctype="application/x-www-form-urlencoded">
-					<h3>Sign In</h3>
-					<p>Enter your username (or email-id) followed by your password.</p>
-					<div class="input-prepend">
+				<h3>Sign In</h3>
+				<p>Enter your username (or email-id) followed by your password.</p>
+				<form action="${request.contextPath}/j_spring_security_check" method='POST' id='ajaxLoginForm' name='ajaxLoginForm'>
+					<label><g:message code="login.enter_credentials" /></label>
+					<fieldset>
 						<span class="add-on"><i class="icon-user"></i></span>
-						<input type="email" id="userId" name="userId"  placeholder="User Name" required>
-					</div>
-					<div class="input-prepend">
+						<input type="text" id="username" name="j_username" class="input-xlarge" placeholder="${message(code: 'login.email')}">
+						<br/>
 						<span class="add-on"><i class="icon-lock"></i></span>
-						<input type="password" name="password" placeholder="Password" required>
-					</div>
-					<label class="checkbox">
-					<input type="checkbox" name="remember">Remember Me</label>
-					<div id="log-in-div">
-						<button id="login_in_submit" class="btn btn-large" type="submit">Log in</button>
-						<button id="forget_password" class="btn btn-large" type="submit">Forget Password</button>						
-					</div>
-				</form>			
+						<input type="password" name="j_password" class="input-xlarge" placeholder="${message(code: 'login.password')}">
+					</fieldset> 
+					<button class="btn btn-large" onclick='Authenticate.authAjax(); return false;'>
+						<g:message code="login.log_in" />
+					</button>                      
+				</form>				
+				<div id="loginErrorMessage"></div>	
 			</div>
         </div>
       </div>
