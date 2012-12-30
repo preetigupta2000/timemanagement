@@ -10,11 +10,14 @@ class BootStrap {
 		springsecurityinit(servletContext)
   }
   def springsecurityinit = { servletContext ->
-	  new Role(authority: 'ROLE_USER').save(failOnError: true, flush: true)
+	  def userRole =new Role(authority: 'ROLE_USER').save(failOnError: true, flush: true)
 	  def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
 	  def testUser = new User(username: 'test@fn.com', email: 'test@fn.com', enabled: true, password: 'fonantrix')
+	  def adminUser = new User(username: 'admin@fn.com', email: 'admin@fn.com', enabled: true, password: 'admin', isAdmin:true)
 	  testUser.save(flush: true)
-	  UserRole.create testUser, adminRole, true
+	  adminUser.save(flush: true)
+	  UserRole.create testUser, userRole, true
+	  UserRole.create adminUser, adminRole, true
   }
   
   def destroy = {
