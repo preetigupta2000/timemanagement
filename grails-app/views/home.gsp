@@ -20,24 +20,7 @@
 			<hr/>
         </div>
         <div class="span5">
-			<div class="login-panel">
-				<h3>Sign In</h3>
-				<p>Enter your username (or email-id) followed by your password.</p>
-				<form action="${request.contextPath}/j_spring_security_check" method='POST' id='ajaxLoginForm' name='ajaxLoginForm'>
-					<label><g:message code="login.enter_credentials" /></label>
-					<fieldset>
-						<span class="add-on"><i class="icon-user"></i></span>
-						<input type="text" id="username" name="j_username" class="input-xlarge" placeholder="${message(code: 'login.email')}">
-						<br/>
-						<span class="add-on"><i class="icon-lock"></i></span>
-						<input type="password" name="j_password" class="input-xlarge" placeholder="${message(code: 'login.password')}">
-					</fieldset> 
-					<button class="btn btn-large" onclick='Authenticate.authAjax(); return false;'>
-						<g:message code="login.log_in" />
-					</button>                      
-				</form>				
-				<div id="loginErrorMessage"></div>	
-			</div>
+			<g:render template="/includes/login"/>
         </div>
       </div>
 

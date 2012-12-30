@@ -11,8 +11,8 @@ class UrlMappings {
 			}
 		}
 
-		"/"(controller:"user",action="login")
-		"/home"(controller:"main")
+		//"/"(controller:"user",action="login")
+		"/"(controller:"main")
 	//	"/"(view:"/index")
 		"500"(view:'/error')
 	}
