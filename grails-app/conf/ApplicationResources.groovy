@@ -22,7 +22,6 @@ modules = {
 		
 		resource url:'js/libs/underscore.js'
 		resource url:'js/libs/backbone.js'
-		resource url:'js/libs/templateManager.js'
 		resource url:'js/libs/mustache.js'
 	}
 	
