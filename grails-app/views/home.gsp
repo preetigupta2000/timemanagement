@@ -24,7 +24,7 @@
         </div>
       </div>
 
-	 <div class="row">
+	 <div class="row hidden-phone hidden-tablet">
 	    <div class="span12">
 			<h3>What Level of Time Management are You At?</h3>
 		</div>
