@@ -1,5 +1,11 @@
    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
+      	<div class="container-fluid">
+			<a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</a>
 		<a class="brand">
 			<img src="images/fonantrix-logo.png" alt="Logo" id="f-logo"/>
 			<span class="address">x Acton MA</span>
@@ -23,3 +29,4 @@
           </div><!--/.nav-collapse -->
       </div>
     </div>
+   </div>
