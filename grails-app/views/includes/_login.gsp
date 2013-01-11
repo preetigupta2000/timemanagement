@@ -11,10 +11,11 @@
 						<div>
 							<p><strong>${sec.username()}</strong></p>
 							<p><small>${sec.username()}</small></p>
+							 <g:jasperReport controller="Main" action="createReport" jasper="users" format="PDF" name="All Userss" />
 						</div>				
 						
 				</div>	
-				<button class="btn btn-large btn-block">Browse</button>										
+				<button class="btn btn-large btn-block"><g:link url="${resource(dir:'login', file:'foo.gsp')}">login/foo.gsp</g:link>Browse</button>										
 				<a href="logout"><button id="logout-button" class="btn btn-large btn-block">Logout</button></a>
 			</div>
 	    </div>
