@@ -94,3 +94,51 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.fonantrix.tm.authenticate.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.fonantrix.tm.authenticate.UserRole'
 grails.plugins.springsecurity.authority.className = 'com.fonantrix.tm.authenticate.Role'
+
+
+
+org{
+	quartz{
+	scheduler.skipUpdateCheck = true
+	scheduler.instanceName = 'DefaultPluginScheduler'
+	threadPool.class = 'org.quartz.simpl.SimpleThreadPool'
+	threadPool.threadCount = 10
+	threadPool.threadPriority = 5
+	threadPool.threadsInheritContextClassLoaderOfInitializingThread = true
+	jobStore.class = 'org.quartz.simpl.RAMJobStore'
+	}
+	}
+	
+	grails{
+	plugin{
+	quartz2 {
+		 autoStartup = true
+	}
+	}
+	}
+	
+	environments {
+		development {
+			grails.plugin.quartz2.autoStartup = true
+		}
+	}
+
+	//settings for mail
+	
+	grails {
+		mail {
+		  host = "smtp.gmail.com"
+		  port = 465
+		  username = "gmail id"
+		  password = "password"
+		  props = ["mail.smtp.auth":"true",
+				   "mail.smtp.socketFactory.port":"465",
+				   "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+				   "mail.smtp.socketFactory.fallback":"false"]
+		}
+	 }
+	
+
+
+
+
