@@ -15,7 +15,7 @@
 						</div>				
 						
 				</div>	
-				<button class="btn btn-large btn-block"><g:link url="${resource(dir:'login', file:'foo.gsp')}">login/foo.gsp</g:link>Browse</button>										
+				<button class="btn btn-large btn-block">Browse</button>										
 				<a href="logout"><button id="logout-button" class="btn btn-large btn-block">Logout</button></a>
 			</div>
 	    </div>
