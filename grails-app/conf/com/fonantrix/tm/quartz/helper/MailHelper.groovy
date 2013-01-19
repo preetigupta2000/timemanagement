@@ -12,9 +12,9 @@ class MailHelper {
 def sendeMail(String email,String msgBody)
 {
 	myService.sendMail {
-		to "bhupender.chauhan@fonantrix.com"
-		cc "sanjib.dhar@fonantrix.com"
-		bcc "sanjib.dhar@fonantrix.com"
+		to "sanjib.dhar@fonantrix.com"
+		cc "preeti.preetigupta2000@gmail.com"
+		bcc "sandeep.pant@fonantrix.com"
 		subject "Hello "+email +".this is a test mail from grails"
 		text "you entered passoer: "+msgBody
 	 }

@@ -1,6 +1,7 @@
 <%@ page import="org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils" %>
 <div id="loginform">
 	<sec:ifLoggedIn>
+	  <g:form controller="WelcomePage" action="viewtable">
 	    <div id="loggedin-container">
 	    	<h3> Welcome back</h3>
 	    	<div class="hero-unit">
@@ -19,6 +20,7 @@
 				<a href="logout"><button id="logout-button" class="btn btn-large btn-block">Logout</button></a>
 			</div>
 	    </div>
+	  </g:form>
 	</sec:ifLoggedIn>
 	<sec:ifNotLoggedIn>
 		<form action="${request.contextPath}/j_spring_security_check" method='POST' id='ajaxLoginForm' name='ajaxLoginForm'>
