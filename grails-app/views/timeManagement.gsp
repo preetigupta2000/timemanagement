@@ -15,10 +15,10 @@
 	           <li><a href="#userTab" data-toggle="tab" onclick="showPage('/timemanagement/UserPage/viewUser','userTab');">Users</a></li>
 	      </ul>
 	      <div class="tab-content">
-	           <div id="clientTab" class="tab-pane active">Arpit</div>
-	           <div id="taskTab" class="tab-pane">Shaik</div>
-	           <div id="projectTab" class="tab-pane">Rashi</div>
-	           <div id="userTab" class="tab-pane">Sanjib</div>
+	           <div id="clientTab" class="tab-pane active"></div>
+	           <div id="taskTab" class="tab-pane"></div>
+	           <div id="projectTab" class="tab-pane"></div>
+	           <div id="userTab" class="tab-pane"></div>
 	      </div>
 	 </div>
 	</body>
