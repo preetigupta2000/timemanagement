@@ -7,7 +7,7 @@ class WelcomePageController {
 	
     def viewtable = {
 		def welcome=WelcomePage.list()
-		render(view: "/welcomePage", model: [welcome: welcome])
+		render(view: "/timeManagement", model: [welcome: welcome])
 	}
 	def delete = {
 		def welcome = WelcomePage.get(params.id)
