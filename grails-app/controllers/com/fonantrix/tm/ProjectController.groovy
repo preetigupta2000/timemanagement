@@ -55,7 +55,7 @@ class ProjectController {
 		if(project)
 		{
 			 project.delete()
-			flash.message = "Project ${params.projectName} deleted"
+			flash.message = "Project ${params.id} deleted"
 			redirect(action:viewProjects)
 		}
 		else
