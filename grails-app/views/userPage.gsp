@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	
+	<meta name="layout" content="mainlayout">
 			<g:javascript src="/libs/jquery-1.7.2.min.js"></g:javascript>
 	    <g:javascript src="modal.js"></g:javascript>
   </head>

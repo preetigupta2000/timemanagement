@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-
+<meta name="layout" content="mainlayout">
 </head>
 <body>
 <div class="container maincontainer">

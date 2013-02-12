@@ -5,6 +5,7 @@
 		<g:javascript src="/libs/jquery-1.7.2.min.js"></g:javascript>
 	    <g:javascript src="modal.js"></g:javascript>
 		<g:javascript src="navigation.js"></g:javascript>
+		<g:javascript src="navigate.js"></g:javascript>
   </head>
   <body>
 	<div class="container maincontainer">
