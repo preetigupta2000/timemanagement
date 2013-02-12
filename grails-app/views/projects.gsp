@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
   
-	<meta name="layout" content="mainlayout">
+	
 		<g:javascript src="/libs/jquery-1.7.2.min.js"></g:javascript>
+		
 	    <g:javascript src="modal.js"></g:javascript>
   </head>
   <body>
@@ -51,7 +52,7 @@
   <div class="modal-body">
     
     <div class="container maincontainer">
-<g:form class="form-horizontal" controller="Project" action="save">
+<g:form class="form-horizontal">
 <fieldset>
 <div id="legend" class="">
 
@@ -110,7 +111,7 @@
    </g:eachError>
   </ul>
 </g:hasErrors>
-<button class="btn btn-success">Add A Project</button>
+<button class="btn btn-success" id="add">Add A Project</button>
 
 <a href="#" class="btn btn-succes" data-dismiss="modal">Cancel</a>
 </div>
