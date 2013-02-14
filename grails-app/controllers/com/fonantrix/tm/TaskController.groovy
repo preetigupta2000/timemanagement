@@ -1,0 +1,68 @@
+package com.fonantrix.tm
+import  com.fonantrix.tm.timemanagement.Tasks
+class TaskController {
+
+    def index() { }
+	def viewTasks = {
+		def tasks=Tasks.executeQuery(" from Tasks")
+		System.out.println("am "+tasks)
+		
+		def task = Tasks.get(params.task)
+		if(task) {
+			task.properties = params
+			task.save()
+		}
+		render(view: "/Tasks", model: [tasks: tasks])
+	}
+	def add = {
+		
+		render(view: "/addtask");
+	}
+	def save = {
+		
+		def tasks = new Tasks(params)
+		
+				tasks.save()
+		redirect(action: "viewTasks")
+		
+				
+		
+		
+		
+	}
+	def editTask = {
+		System.out.println(params.id);
+		Long id=Long.parseLong(params.id);
+		def tasks = Tasks.get( params.id)
+		//System.out.println(projects.projectName)
+		render(view: "/editTask",model: [tasks: tasks]);
+        	
+		
+	}
+	def update={
+		
+		def task = Tasks.get(Long.parseLong(params.id))
+		if(task) {
+			task.properties = params
+			task.save()
+		}
+		
+			
+		redirect(action: "viewTasks")
+	}
+	def delete={
+		def task = Tasks.get( params.id)
+		if(task)
+		{
+			 task.delete()
+			flash.message = "Task ${params.id} deleted"
+			redirect(action:viewTasks)
+		}
+		else
+		{
+			redirect(action:viewTasks)
+			
+		}
+		
+	}
+}
