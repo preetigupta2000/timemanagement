@@ -5,6 +5,7 @@ import com.fonantrix.tm.timemanagement.ClientPage;
 import com.fonantrix.tm.timemanagement.Projects;
 import com.fonantrix.tm.timemanagement.UserPage
 import com.fonantrix.tm.timemanagement.WelcomePage
+import com.fonantrix.tm.timemanagement.UserTasksEntry
 
 class BootStrap {
 	
@@ -40,6 +41,8 @@ class BootStrap {
 				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change',description:'UI Started').save(failOnError: true)
+				new UserTasksEntry( user:'rn001006', project:'Rashi',task:'Nandkeolyar')
+				.save(failOnError: true)
   }
   def springsecurityinit = { servletContext ->
 	  def userRole =new Role(authority: 'ROLE_USER').save(failOnError: true, flush: true)

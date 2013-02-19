@@ -1,12 +1,21 @@
 
 /*Desktop resoltiom*/
-@media(max-width:1152px){
+@media(max-width:1502px){
 
+body{
+div#wrapper{
+div.maincontainer{
+min-height: 500px;
+}
+}
+}
 }
 
 /*tablet styles*/
 @media (min-width: 768px) and (max-width: 979px) {
 	.maincontainer{
+	
+		min-height: 300px;
 		h2 {
 			font-size: 28px;
 		}
@@ -25,6 +34,10 @@
 
 @media (max-width: 767px) {
 	
+	.maincontainer
+	{
+		min-height: 300px;
+	}
 }
 
 
@@ -35,5 +48,26 @@
 		    padding-bottom: 0px;
 		    padding-top: 0px;		
 		}
+		a.brand
+		{
+			img#f-logo
+			{
+				height:32px !important;
+			}
+			span.address
+			{
+				font-size: 12px;	
+			}
+		}
+		ul.tabs
+		{ 
+		li{
+		display: table-row;	
+		}
+		}
+		
 	}
+	
+	
 }
+
