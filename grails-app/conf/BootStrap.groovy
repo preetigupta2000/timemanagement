@@ -32,6 +32,13 @@ class BootStrap {
 				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change',description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
+				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
+				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
+				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
+				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
+				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
+				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
+				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change',description:'UI Started').save(failOnError: true)
   }
   def springsecurityinit = { servletContext ->

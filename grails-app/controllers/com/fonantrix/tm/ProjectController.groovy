@@ -21,14 +21,9 @@ class ProjectController {
 	def save = {
 		
 		def projects = new Projects(params)
-		
-				projects.save()
+		projects.save()
+		redirect(controller:"welcomePage", action: "viewtable")
 		redirect(action: "viewProjects")
-		
-				
-		
-		
-		
 	}
 	def edit = {
 		System.out.println(params.id);
@@ -46,9 +41,9 @@ class ProjectController {
 			project.properties = params
 			project.save()
 		}
+		redirect(controller:"welcomePage", action: "viewtable")
 		
-			
-		redirect(action: "viewProjects")
+		render(view: "/Projects", model:[project:project])
 	}
 	def delete={
 		def project = Projects.get( params.id)
@@ -56,10 +51,12 @@ class ProjectController {
 		{
 			 project.delete()
 			flash.message = "Project ${params.id} deleted"
-			redirect(action:viewProjects)
+			redirect(controller:"welcomePage", action: "viewtable")
+			//redirect(action:viewProjects)
 		}
 		else
 		{
+			redirect(controller:"welcomePage", action: "viewtable")
 			redirect(action:viewProjects)
 			
 		}

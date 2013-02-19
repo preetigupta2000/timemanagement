@@ -16,20 +16,23 @@ class UserPageController {
 		if(user) {
 			user.delete()
 			flash.message = "user ${params.id} deleted"
-			redirect(action:viewUser)
+			redirect(controller:"welcomePage", action: "viewtable")
+			//redirect(action:viewUser)
 		}
 		
 		else
 		{
 		def userNewList = UserPage.list()
-		render(view: "/userPage", model: [user: userNewList])
+		redirect(controller:"welcomePage", action: "viewtable")
+		//render(view: "/userPage", model: [user: userNewList])
 		}
 	}
 	
 	def save = {
 		def user = new UserPage(params)
 		user.save()
-	    redirect(action: "viewUser")
+		redirect(controller:"welcomePage", action: "viewtable")
+	    //redirect(action: "viewUser")
 	}
 	
 	def edit = {
@@ -47,7 +50,8 @@ class UserPageController {
 		user.properties = params
 		user.save()
 		}
-		redirect(action: "viewUser")
+		redirect(controller:"welcomePage", action: "viewtable")
+		//redirect(action: "viewUser")
 		}
 		
 	

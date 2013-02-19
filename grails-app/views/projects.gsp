@@ -2,21 +2,21 @@
 <html lang="en">
   <head>
   
-	<meta name="layout" content="mainlayout">
+
 		<g:javascript src="/libs/jquery-1.7.2.min.js"></g:javascript>
 		
 	    <g:javascript src="modal.js"></g:javascript>
   </head>
   <body>
-   <div class="container maincontainer">
-    <div>
+   
+    <div class="row">
    	 
-   	 <a type="button" class="btn" style="width:10%;" href="#test_modal_project" data-toggle="modal">Add New</a>
+   	 <a type="button" class="btn span2" href="#test_modal_project" data-toggle="modal">Add New</a>
     </div>
     <g:if test="${flash.message}">
     <div>${flash.message}</div>
     </g:if>
-  	<table class="table table-striped">
+  	<table class="table table-striped table-hover table-bordered table-condensed">
   		<thead>
   			<tr>
   				<th>Project Name</th>
@@ -42,7 +42,7 @@
 	  		</g:each>
   		</tbody>
   	</table>
-   </div>
+
    
    <div class="modal fade" id="test_modal_project">
   <div class="modal-header">
@@ -52,7 +52,7 @@
   <div class="modal-body">
     
     <div class="container maincontainer">
-<g:form class="form-horizontal" controller="Project" action="save">
+<g:form class="form-horizontal">
 <fieldset>
 <div id="legend" class="">
 
@@ -110,8 +110,8 @@
        <li><g:message error="${err}" /></li> 
    </g:eachError>
   </ul>
-</g:hasErrors>
-<button class="btn btn-success">Add A Project</button>
+</g:hasErrors> 
+<button class="btn btn-success" id="add">Add A Project</button>
 
 <a href="#" class="btn btn-succes" data-dismiss="modal">Cancel</a>
 </div>

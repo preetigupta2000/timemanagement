@@ -7,7 +7,7 @@
 			<span class="icon-bar"></span>
 			</a>
 		<a class="brand">
-			<img src="images/fonantrix-logo.png" alt="Logo" id="f-logo"/>
+			<img src="../images/fonantrix-logo.png" alt="Logo" id="f-logo"/>
 			<span class="address">x Acton MA</span>
 		</a>
           <div class="nav-collapse collapse">

@@ -2,18 +2,18 @@
 <html lang="en">
   <head>
  
-	<meta name="layout" content="mainlayout">
+	
 		<g:javascript src="/libs/jquery-1.7.2.min.js"></g:javascript>
 	    <g:javascript src="modal.js"></g:javascript>
   </head>
   <body>
-   <div class="container maincontainer">
-    <div>
-    <a type="button" class="btn" style="width:11%;" href="#test_modal" data-toggle="modal">Add New Client</a>
-   	 <i class="icon-user" title="Add New Client"></i>
+   <div class="container">
+    <div class="row">
+    <a type="button" class="btn span2"  href="#test_modal" data-toggle="modal">Add New User</a>
+   	 
     </div>
    
-  	<table class="table table-striped">
+  	<table class="table table-striped table-hover table-bordered table-condensed">
   		<thead>
   			<tr>
   				
@@ -51,9 +51,6 @@
 	        <h2>Add New Client</h2>
 	      </div>
 	    
-	
-	    
-	
 	    <div class="control-group">
 	
 	          <!-- Text input-->

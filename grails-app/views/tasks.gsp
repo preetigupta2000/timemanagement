@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta name="layout" content="mainlayout">
+  
 	
 		<g:javascript src="/libs/jquery-1.7.2.min.js"></g:javascript>
 	    <g:javascript src="modal.js"></g:javascript>
   </head>
   <body>
-   <div class="container maincontainer">
-    <div>
+   
+    <div class="row">
    	 
-   	 <a type="button" class="btn" style="width:10%;" href="#test_modal_project" data-toggle="modal">Add a new task</a>
+   	 <a type="button" class="btn span2"  href="#test_modal_project" data-toggle="modal">Add a new task</a>
     </div>
     <g:if test="${flash.message}">
     <div>${flash.message}</div>
     </g:if>
-  	<table class="table table-striped">
+  	<table class="table table-striped table-hover table-bordered table-condensed">
   		<thead>
   			<tr>
   				<th>Task</th>
@@ -41,7 +41,7 @@
 	  		</g:each>
   		</tbody>
   	</table>
-   </div>
+
    
    <div class="modal fade" id="test_modal_project">
   <div class="modal-header">

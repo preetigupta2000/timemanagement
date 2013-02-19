@@ -6,11 +6,11 @@ class WelcomePageController {
 	
 	
     def viewtable = {
-		def welcome=WelcomePage.list()
+		def welcome=WelcomePage.list() // list of whole data from the database
 		render(view: "/timeManagement", model: [welcome: welcome])
 	}
 	def delete = {
-		def welcome = WelcomePage.get(params.id)
+		def welcome = WelcomePage.get(params.id) // this will get the list of a particular id
 		welcome.delete(flush: true)
 		def welcomeNewList = WelcomePage.list()
 		render(view: "/welcomePage", model: [welcome: welcomeNewList])

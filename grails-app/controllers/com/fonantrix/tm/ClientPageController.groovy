@@ -17,12 +17,14 @@ class ClientPageController {
 		if(client) {
 			client.delete()
 			flash.message = "Client ${params.id} deleted"
-			redirect(action:viewtable)
+			redirect(controller:"welcomePage", action: "viewtable")
+			//redirect(action:viewtable)
 		}
 		
 		else
 		{
 		def clientNewList = ClientPage.list()
+		redirect(controller:"welcomePage", action: "viewtable")
 		render(view: "/clientPage", model: [client: clientNewList])
 		}
 	}
@@ -33,7 +35,8 @@ class ClientPageController {
 	def save = {
 		def client = new ClientPage(params)
 		client.save()
-	    redirect(action: "viewtable")
+		redirect(controller:"welcomePage", action: "viewtable")
+	    //redirect(action: "viewtable")
 	}
 	
 	def edit = {
@@ -51,7 +54,8 @@ class ClientPageController {
 		client.properties = params
 		client.save()
 		}
-		redirect(action: "viewtable")
+		redirect(controller:"welcomePage", action: "viewtable")
+		//redirect(action: "viewtable")
 		}
 		
 	

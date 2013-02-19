@@ -10,3 +10,18 @@ function showPage(url,idd)
 
 
 }
+
+
+$('#add').click(function(){
+	
+	
+	jQuery.get(                                                                         
+			"/timamanagement/project/save",                                                               		                                                       
+			function(data){    	                                                                       
+	    	jQuery("#projectTab").html(data);                                                         
+			},                                                                                         
+			'html'    	   	                                                                           
+	    	)	
+
+
+});

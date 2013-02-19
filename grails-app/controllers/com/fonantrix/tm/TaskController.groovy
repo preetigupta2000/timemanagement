@@ -21,14 +21,9 @@ class TaskController {
 	def save = {
 		
 		def tasks = new Tasks(params)
-		
-				tasks.save()
-		redirect(action: "viewTasks")
-		
-				
-		
-		
-		
+		tasks.save()
+		redirect(controller:"welcomePage", action: "viewtable")
+		//redirect(action: "viewTasks")
 	}
 	def editTask = {
 		System.out.println(params.id);
@@ -36,9 +31,7 @@ class TaskController {
 		def tasks = Tasks.get( params.id)
 		//System.out.println(projects.projectName)
 		render(view: "/editTask",model: [tasks: tasks]);
-        	
-		
-	}
+ 	}
 	def update={
 		
 		def task = Tasks.get(Long.parseLong(params.id))
@@ -47,8 +40,8 @@ class TaskController {
 			task.save()
 		}
 		
-			
-		redirect(action: "viewTasks")
+		redirect(controller:"welcomePage", action: "viewtable")
+		//redirect(action: "viewTasks")
 	}
 	def delete={
 		def task = Tasks.get( params.id)
@@ -56,11 +49,13 @@ class TaskController {
 		{
 			 task.delete()
 			flash.message = "Task ${params.id} deleted"
-			redirect(action:viewTasks)
+			redirect(controller:"welcomePage", action: "viewtable")
+			//redirect(action:viewTasks)
 		}
 		else
 		{
-			redirect(action:viewTasks)
+			redirect(controller:"welcomePage", action: "viewtable")
+			//redirect(action:viewTasks)
 			
 		}
 		

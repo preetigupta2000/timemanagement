@@ -19,7 +19,7 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
         <!-- iPhone ICON-->
         <link rel="apple-touch-icon" sizes="57x57" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}" />
-         
+        <link rel="stylesheet" href="${resource(dir: 'css', file: 'tabs.css')}" type="text/css">
         <r:require modules="corestyles"/>          		
 		<r:require modules="corejs"/>
 	    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
