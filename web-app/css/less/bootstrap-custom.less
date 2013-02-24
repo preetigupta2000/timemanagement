@@ -13,16 +13,51 @@
     .reset-filter();
 }
 
+body > #wrapper{
+    background-color: #E9E9E9;
+    background-image: url(../../images/retaina_wood.png);
+    background-repeat: repeat;
+}
+
 .maincontainer {
     padding-top: 60px;
-    padding-bottom: 40px;
+	h2 {
+		small {
+			font-size: 25.5px;
+			color: inherit;
+		}
+	}    
+}
+
+footer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #2A2A2A, #1A1A1A) repeat-x scroll left bottom #444444;
+    border-color: #000000;
+    border-image: none;
+    color: white;
+    padding: 10px;
 }
 
 .navbar {
 	.navbar-inner {
 		background-color: @HSCHeaderColor;
-  		background-image: linear-gradient(to bottom, #565961, #151617);
-    	background-repeat: repeat-x;		
+	    -moz-border-bottom-colors: none;
+	    -moz-border-left-colors: none;
+	    -moz-border-right-colors: none;
+	    -moz-border-top-colors: none;
+	    background: -moz-linear-gradient(center top , #2A2A2A, #1A1A1A) repeat-x scroll left bottom #444444;
+	    border-image: none;
+	    border-radius: 0 0 0 0;
+	    border-style: solid;
+	    border-width: 1px 0;
+	    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset;
+	    min-height: 50px;
+	    padding-right: 20px;
+	    position: relative;
+	    z-index: 100;
 	}
 	.brand {
 		padding: 0 20px;
@@ -33,7 +68,7 @@
 }
 
 #loginform { 
-	margin-top:4em;
+	margin-top:2.5em;
 	#ajaxLoginForm, #loggedin-container {
 		border:solid 2px @login-h3-color;
 		.border-radius(10px);
@@ -44,7 +79,7 @@
 				line-height: 43px;
 				width:21px;
 				i {
-					font-size:28px;
+					font-size:26px;
 					margin-right:5px;
 				}
 				i.icon-lock {
@@ -60,9 +95,7 @@
 			    color:#595959;
 			   .box-shadow(none); 
 			}
-    	}
-		
-		
+    	}	
 		.errorMessage {
 			color: #b94a48;
 			padding:10px;
@@ -77,7 +110,11 @@
 		h3 {
 			color:@white;
 			font-size:20px;
-			.vertical-gradient(@login-h3-color, lighten(@login-h3-color, 10%));
+		    -moz-border-bottom-colors: none;
+		    -moz-border-left-colors: none;
+		    -moz-border-right-colors: none;
+		    -moz-border-top-colors: none;
+		    background: -moz-linear-gradient(center top , #2A2A2A, #1A1A1A) repeat-x scroll left bottom #444444;
 			text-align:center;
 			margin:0;
 			padding:0.3em 0;
@@ -90,6 +127,7 @@
 		.hero-unit {
 			background-color:#f9fafb;
 			padding:1.5em 1.5em 1em 1.5em;
+			border-radius: 0px 0px 6px 6px;
 			margin-bottom:0;
 			p {
 				font-size: 14px;
@@ -100,12 +138,8 @@
 				line-height: 1;
 			}
 			.btn {
-				margin-top:10px;
-			}
-			#login-button {
-				line-height:32px;
-				margin-top:20px;
-			}
+				margin-top:10px;		
+			}	
 		}
 		#user-info {
 			border:solid 1px darken(@hero-unit-color,10%);

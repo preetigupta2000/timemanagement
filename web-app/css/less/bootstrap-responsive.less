@@ -2,13 +2,13 @@
 /*Desktop resoltiom*/
 @media(max-width:1502px){
 
-body{
-div#wrapper{
-div.maincontainer{
-min-height: 500px;
-}
-}
-}
+	body{
+		div#wrapper{
+			div.maincontainer{
+					min-height: 500px;
+				}
+			}
+	}
 }
 
 /*tablet styles*/
@@ -43,10 +43,34 @@ min-height: 500px;
 
 @media(max-width:480px){
 	body {
-		padding:5px;
+		padding:0px;
 		.maincontainer {
-		    padding-bottom: 0px;
-		    padding-top: 0px;		
+		    padding: 0px 5px;
+			h2 {
+				font-size: 25px;
+				small {
+					font-size: 20.5px;
+					color: inherit;
+				}
+			}
+		}
+		#loginform { 
+			#ajaxLoginForm, #loggedin-container {
+				.input-prepend  {
+					.add-on {
+						height:32px;
+						line-height: 32px;
+						width:18px;
+						i {
+							font-size:20px;
+						}
+					}
+				}
+			}		
+		}
+		.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+		    margin-left: 0px;
+		    margin-right: 0px;
 		}
 		a.brand
 		{
@@ -61,9 +85,9 @@ min-height: 500px;
 		}
 		ul.tabs
 		{ 
-		li{
-		display: table-row;	
-		}
+			li{
+				display: table-row;	
+			}
 		}
 		
 	}

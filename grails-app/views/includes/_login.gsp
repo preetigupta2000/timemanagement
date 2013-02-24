@@ -36,9 +36,12 @@
 					<span class="add-on"><i class="icon-lock"></i></span>
 					<input class="span2 input-xlarge" id="j_password" name="j_password" type="Password" placeholder="password" required>
 				</div>
-				<button class="btn btn-large btn-block" id="login-button">
+				<button class="btn btn-primary btn-large btn-block" id="login-button">
 					Login
-				</button> 
+				</button>
+				<button class="btn btn-warning btn-large btn-block" id="new-user">
+					Register
+				</button>
 			</div>
 		</form>
 		<div id="loginErrorMessage"></div> 

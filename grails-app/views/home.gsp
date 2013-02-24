@@ -12,8 +12,7 @@
 			<img src="images/cal.png" alt="" />
 		</div>
         <div class="span3">
-			<h2>iTime</h2>
-			<h3>Mobile Time Management</h3>
+			<h2>iTime <small>Mobile Time Management</small></h2>
 			<p>Ordinary people think merely of spending time. Great people think of using it.</p>
 			<hr/>
 			<p>Time is the school in which we learn, time is the fire in which we burn.</p>
