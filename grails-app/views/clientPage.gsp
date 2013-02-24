@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ page import="org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils" %>
 <html lang="en">
   <head>
  
@@ -8,18 +9,22 @@
   </head>
   <body>
    <div class="container">
-    <div class="row">
-    <a type="button" class="btn span2"  href="#test_modal" data-toggle="modal">Add New User</a>
-   	 
-    </div>
    
+    <div class="row">
+    <sec:access expression="hasRole('ROLE_ADMIN')"> 
+    <a type="button" class="btn span2"  href="#test_modal" data-toggle="modal">Add New User</a>
+   	  </sec:access>
+    </div>
+  
   	<table class="table table-striped table-hover table-bordered table-condensed">
   		<thead>
   			<tr>
   				
   				<th>Client Name</th>
   				<th>Client Description</th>
+  				 <sec:access expression="hasRole('ROLE_ADMIN')"> 
   				<th>Action</th>
+  			</sec:access>
   			</tr>
   		</thead>
   		<tbody>
@@ -29,8 +34,9 @@
 	  				 
 	  				<td>${fieldValue(bean:ClientPage, field:'name')}</td>
 	  				<td>${fieldValue(bean:ClientPage, field:'description')}</td>
-	  				
+	  				 <sec:access expression="hasRole('ROLE_ADMIN')"> 
 	  				<td><g:link id="${fieldValue(bean:ClientPage, field:'id')}" class="confirm-delete" controller="ClientPage" action="edit"><i class="icon-pencil" title="Edit"></i></g:link> |  <g:link id="${fieldValue(bean:ClientPage, field:'id')}" class="confirm-delete" controller="ClientPage" data-confirm="Are you sure you want to delete?" value="Delete" action="delete"><i class="icon-trash" title="Delete"></i></g:link></td>
+	  			</sec:access>
 	  			</tr>
 	  		</g:each>
 	  		
