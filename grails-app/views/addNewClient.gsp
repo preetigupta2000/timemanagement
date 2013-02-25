@@ -32,7 +32,7 @@
 	          <label class="control-label" for="input01">Client Description</label>
 	          <div class="controls">
 	            <g:textField  name="description" placeholder="Please enter the Client Description" class="input-xlarge" value="${form?.description}"></g:textField>
-	          </div>
+	           </div>
 	        </div>
 	
 	  
