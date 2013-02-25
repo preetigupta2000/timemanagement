@@ -95,26 +95,24 @@ grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.fonantrix.tm
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.fonantrix.tm.authenticate.UserRole'
 grails.plugins.springsecurity.authority.className = 'com.fonantrix.tm.authenticate.Role'
 
-
-
-org{
-	quartz{
-	scheduler.skipUpdateCheck = true
-	scheduler.instanceName = 'DefaultPluginScheduler'
-	threadPool.class = 'org.quartz.simpl.SimpleThreadPool'
-	threadPool.threadCount = 10
-	threadPool.threadPriority = 5
-	threadPool.threadsInheritContextClassLoaderOfInitializingThread = true
-	jobStore.class = 'org.quartz.simpl.RAMJobStore'
-	}
+	org{
+		quartz{
+			scheduler.skipUpdateCheck = true
+			scheduler.instanceName = 'DefaultPluginScheduler'
+			threadPool.class = 'org.quartz.simpl.SimpleThreadPool'
+			threadPool.threadCount = 10
+			threadPool.threadPriority = 5
+			threadPool.threadsInheritContextClassLoaderOfInitializingThread = true
+			jobStore.class = 'org.quartz.simpl.RAMJobStore'
+			}
 	}
 	
 	grails{
-	plugin{
-	quartz2 {
-		 autoStartup = true
-	}
-	}
+		plugin{
+			quartz2 {
+				 autoStartup = true
+			}
+		}
 	}
 	
 	environments {
