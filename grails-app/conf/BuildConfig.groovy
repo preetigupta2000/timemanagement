@@ -42,6 +42,7 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.7.2"
         runtime ":resources:1.2.RC2" 
 
+		runtime ":cache-headers:1.1.5"  //Provides support for caching expiry headers for static resources.
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
         //runtime ":cached-resources:1.0"
