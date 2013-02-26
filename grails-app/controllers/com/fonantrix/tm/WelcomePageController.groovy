@@ -3,11 +3,11 @@ import com.fonantrix.tm.timemanagement.WelcomePage;
 class WelcomePageController {
 
 	static allowedMethods = [save: "POST", update: "GET", delete: "GET"]
-	
-	
+	def grailsApplication
+
     def viewtable = {
 		def welcome=WelcomePage.list() // list of whole data from the database
-		render(view: "/timeManagement", model: [welcome: welcome])
+		render(view: "/timeManagement", model: [welcome: welcome,globalTabVar:grailsApplication.config.globalTabVar])
 	}
 	def delete = {
 		def welcome = WelcomePage.get(params.id) // this will get the list of a particular id

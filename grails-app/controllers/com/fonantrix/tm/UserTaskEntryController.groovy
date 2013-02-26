@@ -3,18 +3,22 @@ import  com.fonantrix.tm.timemanagement.UserTasksEntry
 
 
 class UserTaskEntryController {
-
+  
+  def grailsApplication
   def index() { }
 	def viewUserTasks = {
-		def usertasksentry=UserTasksEntry.executeQuery(" from UserTasksEntry")
-		System.out.println("am "+usertasksentry)
 		
+		def usertasksentry=UserTasksEntry.executeQuery(" from UserTasksEntry")
 		def usertaskentry = UserTasksEntry.get(params.usertaskentry)
 		if(usertaskentry) {
 			usertaskentry.properties = params
 			usertaskentry.save()
 		}
 		render(view: "/usertasksentry", model: [usertasksentry: usertasksentry])
+	}
+	def setTabVarValue = {
+		grailsApplication.config.globalTabVar = "userTaskEntryTab"
+		render("userTaskEntryTab")
 	}
 	def add = {
 		
@@ -27,13 +31,13 @@ class UserTaskEntryController {
 		usertasksentry.properties = params
 		usertasksentry.save()
 		redirect(controller:"welcomePage", action: "viewtable")
-		//redirect(action: "viewUserTasks")
+		
 		}
 	def editUserTask = {
 		System.out.println(params.id);
 		Long id=Long.parseLong(params.id);
 		def usertasksentry = UserTasksEntry.get( params.id)
-		//System.out.println(projects.projectName)
+		
 		
 		render(view: "/editUserTask",model: [usertasksentry: usertasksentry]);
         	
@@ -48,7 +52,7 @@ class UserTaskEntryController {
 		}
 		
 		redirect(controller:"welcomePage", action: "viewtable")
-		//redirect(action: "viewUserTasks")
+		
 	}
 	def delete={
 		def usertaskentry = UserTasksEntry.get( params.id)
@@ -57,12 +61,11 @@ class UserTaskEntryController {
 			 usertaskentry.delete()
 			flash.message = "Task ${params.id} deleted"
 			redirect(controller:"welcomePage", action: "viewtable")
-			//redirect(action:viewUserTasks)
+			
 		}
 		else
 		{
 			redirect(controller:"welcomePage", action: "viewtable")
-			//redirect(action:viewUserTasks)
 			
 		}
 		

@@ -1,11 +1,10 @@
 package com.fonantrix.tm
 import  com.fonantrix.tm.timemanagement.Projects
 class ProjectController {
-
+	def grailsApplication
     def index() { }
 	def viewProjects = {
 		def projects=Projects.executeQuery(" from Projects")
-		System.out.println("am "+projects)
 		
 		def project = Projects.get(params.projectName)
 		if(project) {
@@ -13,6 +12,10 @@ class ProjectController {
 			project.save()
 		}
 		render(view: "/Projects", model: [projects: projects])
+	}
+	def setTabVarValue = {
+		grailsApplication.config.globalTabVar = "projectTab"
+		render("projectTab")
 	}
 	def add = {
 		
@@ -29,10 +32,9 @@ class ProjectController {
 		System.out.println(params.id);
 		Long id=Long.parseLong(params.id);
 		def projects = Projects.get( params.id)
-		//System.out.println(projects.projectName)
-		render(view: "/edit",model: [projects: projects]);
-        	
 		
+		render(view: "/edit",model: [projects: projects]);
+   	
 	}
 	def update={
 		

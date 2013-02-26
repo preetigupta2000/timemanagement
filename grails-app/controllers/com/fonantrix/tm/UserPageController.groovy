@@ -3,12 +3,18 @@ package com.fonantrix.tm
 import com.fonantrix.tm.timemanagement.UserPage
 
 class UserPageController {
-
+	def grailsApplication
+	
     def index() { }
  def viewUser = {
 		def user=UserPage.list()
+		
 		render(view: "/userPage", model: [user: user])
 	}
+ def setTabVarValue = {
+	 grailsApplication.config.globalTabVar = "userTab"
+	 render("userTab");
+ }
 	def delete = {
 		def user = UserPage.get(params.id)
 		

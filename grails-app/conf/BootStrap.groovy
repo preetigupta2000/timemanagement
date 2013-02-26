@@ -41,7 +41,7 @@ class BootStrap {
 				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change',description:'UI Started').save(failOnError: true)
-				new UserTasksEntry( user:'rn001006', project:'Rashi',task:'Nandkeolyar')
+				new UserTasksEntry( user:'rn001006', project:'Rashi',task:'Nandkeolyar',noOfHours:'1',comment:'hi')
 				.save(failOnError: true)
   }
   def springsecurityinit = { servletContext ->

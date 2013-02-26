@@ -60,8 +60,9 @@ class LoginController {
 	 * The redirect action for Ajax requests.
 	 */
 	def authAjax = {
-		response.setHeader 'Location', SpringSecurityUtils.securityConfig.auth.ajaxLoginFormUrl
-		response.sendError HttpServletResponse.SC_UNAUTHORIZED
+		/*response.setHeader 'Location', SpringSecurityUtils.securityConfig.auth.ajaxLoginFormUrl
+		response.sendError HttpServletResponse.SC_UNAUTHORIZED*/
+		redirect action:'/timemanagement/welcomePage/viewtable'
 	}
 
 	/**

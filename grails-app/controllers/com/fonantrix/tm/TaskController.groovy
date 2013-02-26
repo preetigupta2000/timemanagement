@@ -1,11 +1,11 @@
 package com.fonantrix.tm
 import  com.fonantrix.tm.timemanagement.Tasks
 class TaskController {
-
+	
+	def grailsApplication
     def index() { }
 	def viewTasks = {
 		def tasks=Tasks.executeQuery(" from Tasks")
-		System.out.println("am "+tasks)
 		
 		def task = Tasks.get(params.task)
 		if(task) {
@@ -15,11 +15,14 @@ class TaskController {
 		render(view: "/Tasks", model: [tasks: tasks])
 	}
 	def add = {
-		
 		render(view: "/addtask");
 	}
+	def setTabVarValue = {
+		grailsApplication.config.globalTabVar = "taskTab"
+		render("taskTab")
+	}
 	def save = {
-		
+		ConfigurationHolder.get
 		def tasks = new Tasks(params)
 		tasks.save()
 		redirect(controller:"welcomePage", action: "viewtable")

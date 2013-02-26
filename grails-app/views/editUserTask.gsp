@@ -2,8 +2,22 @@
 <html lang="en">
   <head>
 	<meta name="layout" content="mainlayout">
+	<g:javascript src="/libs/jquery-1.7.2.min.js"></g:javascript>
+	<script language=Javascript>
+	 jQuery(window).ready(function() {
+		   // put all your jQuery goodness in here.
+	 var hiddenvalue = jQuery("#myhidden").val();
+	 jQuery('select[name=user]').val(hiddenvalue).attr('selected',true);
+	 var hiddenvalueproject = jQuery("#myhiddenproject").val();
+	 jQuery('select[name=project]').val(hiddenvalueproject).attr('selected',true);
+	 var hiddenvaluetask = jQuery("#myhiddentask").val();
+	 jQuery('select[name=task]').val(hiddenvaluetask).attr('selected',true);
+	 });
+
+    
+   </script>
   </head>
-  <body>
+  <body onload="changeHiddenInput()">
   
   
   
@@ -43,24 +57,52 @@
 			<tbody>
 			<tr>
 			<td><label for="user">User:</label></td>
-			<td><input type="text" id="user" name="user" value="${fieldValue(bean:users,field:'users')}"/>
+			<td>
+			<input type='hidden' id='myhidden' value="${fieldValue(bean:usertasksentry,field:'user')}">
+                           <select name="user" class="input-xlarge" id="user1">
+                              <option value="user1">User1</option>
+                              <option value="user2">User2</option>
+                              <option value="user3">User3</option>
+                           </select>
+                       
 			</td>
 			</tr>
 			<tr>
 			<td>
-			<label for="project">Project:</label></td>
-			<td><input type="text" id="project" name="project" value="${fieldValue(bean:usertaskentry,field:'project')}"/>
+			<label for="project">Project:</label></td><td>
+			<input type='hidden' id='myhiddenproject' value="${fieldValue(bean:usertasksentry,field:'project')}">
+		
+			 <select name="project" class="input-xlarge" id="project1" >
+                              <option value="project1">MMC_Drop-2</option>
+                              <option value="project2">MMC_Drop-3</option>
+                              <option value="project3">IVM</option>
+                           </select>
 			</td>
 			</tr>
-			
 			<tr>
 			<td>
 			<label for="lastname">Task:</label></td>
-			<td><input type="text" id="task" name="task" value="${fieldValue(bean:usertaskentry,field:'task')}"/>
+			<td><input type='hidden' id='myhiddentask' value="${fieldValue(bean:usertasksentry,field:'task')}">
+			<select name="task" class="input-xlarge" id="task1">
+                              <option value="task1">Task1</option>
+                              <option value="task2">Task2</option>
+                              <option value="task3">Task3</option>
+                           </select>
 			</td>
 			</tr>
-						
-			</tbody>
+			<tr>
+			<td>
+			<label for="task">No of Hours:</label></td>
+			<td><input type="text" id="noOfHours" name="noOfHours" value="${fieldValue(bean:usertasksentry,field:'noOfHours')}"/>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<label for="lastname">Comment:</label></td>
+			<td><textarea cols="40" rows="2" id="comment" name="comment" >${fieldValue(bean:usertasksentry,field:'comment')}</textarea>
+			</td>
+			</tr>
+		    </tbody>
 			</table>
 			
 
@@ -71,4 +113,5 @@
    </div>
      	
   </body>
+   
 </html>

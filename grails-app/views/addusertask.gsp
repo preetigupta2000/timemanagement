@@ -45,8 +45,21 @@
 </div>
 </div>
 
+<div class="control-group">
 
-
+<!-- Text input-->
+<label class="control-label" for="input01">No Of Hours</label>
+<div class="controls">
+<g:textField name="noOfHours" placeholder="Please enter no of hours" class="input-xlarge" value="${form?.noOfHours}"></g:textField>
+</div>
+</div>
+<div class="control-group">
+                        <!-- Text input-->
+                        <label class="control-label" for="input01">Comments</label>
+                        <div class="controls">
+                        <g:textArea name="comment" placeholder="Please enter comments" class="input-xlarge" value="${form?.comment}" rows="5" cols="40"></g:textArea>
+                        </div>
+                     </div>
 <div class="control-group">
 <!-- Button -->
 <div class="controls">

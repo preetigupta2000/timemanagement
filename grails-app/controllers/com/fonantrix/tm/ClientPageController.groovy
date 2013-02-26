@@ -1,14 +1,19 @@
 package com.fonantrix.tm
 import com.fonantrix.tm.timemanagement.ClientPage;
 class ClientPageController {
-
-  
+	
+	def grailsApplication
 	
 	def index(){}
 	
     def viewtable = {
+		
 		def client=ClientPage.list()
 		render(view: "/clientPage", model: [client: client])
+	}
+	def setTabVarValue = {
+		grailsApplication.config.globalTabVar = "clientTab"
+		render("clientTab");
 	}
 	def delete = {
 		def client = ClientPage.get(params.id)
