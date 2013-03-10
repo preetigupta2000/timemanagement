@@ -6,7 +6,7 @@ class MainController {
 	def schedulingService;
 	def scaffold = User
 	
-	def index() {
+	def index() {	
 		render(view: "/home")
 		
 

@@ -1,7 +1,5 @@
-<%@ page import="org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils" %>
 <div id="loginform">
 	<sec:ifLoggedIn>
-	  <g:form controller="WelcomePage" action="viewtable">
 	    <div id="loggedin-container">
 	    	<h3> Welcome back</h3>
 	    	<div class="hero-unit">
@@ -11,16 +9,17 @@
 						</div>	
 						<div>
 							<p><strong>${sec.username()}</strong></p>
-							<p><small>${sec.username()}</small></p>
 							 <g:jasperReport controller="Main" action="createReport" jasper="users" format="PDF" name="All Userss" />
 						</div>				
 						
 				</div>	
-				<button class="btn btn-large btn-block">Browse</button>										
+				<a href="welcomePage"><button class="btn btn-large btn-block">Browse</button></a>
+				<g:if test='${sec.loggedInUserInfo(field:"id").equals("1")}'> 
+					<button id="user-button" class="btn btn-large btn-block">Manage Information</button>
+				</g:if>
 				<a href="logout"><button id="logout-button" class="btn btn-large btn-block">Logout</button></a>
 			</div>
 	    </div>
-	  </g:form>
 	</sec:ifLoggedIn>
 	<sec:ifNotLoggedIn>
 		<form action="${request.contextPath}/j_spring_security_check" method='POST' id='ajaxLoginForm' name='ajaxLoginForm'>
@@ -46,5 +45,4 @@
 		</form>
 		<div id="loginErrorMessage"></div> 
 	</sec:ifNotLoggedIn>
-</div>		
-			
+</div>

@@ -95,6 +95,11 @@ grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.fonantrix.tm
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.fonantrix.tm.authenticate.UserRole'
 grails.plugins.springsecurity.authority.className = 'com.fonantrix.tm.authenticate.Role'
 
+//grails.plugins.springsecurity.rememberMe.alwaysRemember = true
+grails.plugins.springsecurity.successHandler.alwaysUseDefault = true
+
+grails.plugins.springsecurity.logout.afterLogoutUrl = '/'
+
 	org{
 		quartz{
 			scheduler.skipUpdateCheck = true

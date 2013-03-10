@@ -42,7 +42,9 @@ class LoginController {
 	 * Show the login page.
 	 */
 	def auth = {
-
+		redirect uri:"/"
+		return
+		/*
 		def config = SpringSecurityUtils.securityConfig
 
 		if (springSecurityService.isLoggedIn()) {
@@ -54,15 +56,15 @@ class LoginController {
 		String postUrl = "${request.contextPath}${config.apf.filterProcessesUrl}"
 		render view: view, model: [postUrl: postUrl,
 		                           rememberMeParameter: config.rememberMe.parameter]
+		*/
 	}
 
 	/**
 	 * The redirect action for Ajax requests.
 	 */
-	def authAjax = {
-		/*response.setHeader 'Location', SpringSecurityUtils.securityConfig.auth.ajaxLoginFormUrl
-		response.sendError HttpServletResponse.SC_UNAUTHORIZED*/
-		redirect action:'/timemanagement/welcomePage/viewtable'
+	def authAjax = {		
+		response.setHeader 'Location', SpringSecurityUtils.securityConfig.auth.ajaxLoginFormUrl
+		response.sendError HttpServletResponse.SC_UNAUTHORIZED
 	}
 
 	/**
@@ -125,7 +127,7 @@ class LoginController {
 	 * The Ajax success redirect url.
 	 */
 	def ajaxSuccess = {
-		render([success: true, username: springSecurityService.authentication.name, email: springSecurityService.authentication.email] as JSON)
+		render([success: true, username: springSecurityService.currentUser.username, email: springSecurityService.currentUser.email, isAdmin: springSecurityService.currentUser.isAdmin] as JSON)
 	}
 
 	/**

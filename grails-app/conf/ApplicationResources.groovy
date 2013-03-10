@@ -27,6 +27,7 @@ modules = {
 	
 	corejs {
 		dependsOn "libs"
+		resource url:'js/authenticate/authenticate.js'
 		resource url:'js/application.js'
 		resource url:'js/index.js'
 	}

@@ -49,8 +49,8 @@ class BootStrap {
 	  def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
 	  def testUser = new User(username: 'test@fn.com', email: 'test@fn.com', enabled: true, password: 'fonantrix')
 	  def adminUser = new User(username: 'admin@fn.com', email: 'admin@fn.com', enabled: true, password: 'admin', isAdmin:true)
-	  testUser.save(flush: true)
 	  adminUser.save(flush: true)
+	  testUser.save(flush: true)
 	  UserRole.create testUser, userRole, true
 	  UserRole.create adminUser, adminRole, true
   }
