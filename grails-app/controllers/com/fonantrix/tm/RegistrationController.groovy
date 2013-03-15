@@ -12,9 +12,11 @@ class RegistrationController {
 		}
 	
 	def save = {
-	 def userRole =new Role(authority: 'ROLE_USER').save(failOnError: true, flush: true)
+	 def userRole =new Role(authority: 'ROLE_USER').save(flush: true)
+	 System.out.println("Data" + userRole)
 	 // def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
 	  def testUser = new User(username: params.email, email: params.email, enabled: true, password: params.password)
+	  System.out.println("Data" + params)
 	//  def adminUser = new User(username: 'admin@fn.com', email: 'admin@fn.com', enabled: true, password: 'admin', isAdmin:true)
 	  testUser.save(flush: true)
 	 // adminUser.save(flush: true)
