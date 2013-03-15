@@ -134,7 +134,7 @@ a, ul.tabs li.active.glyphicons i:before, ul.tabs li.active a {
 .glyphicons.active:hover {
 	
 	background-color: #F4F4F4 !important;
-    background-image: url("http://mosaicpro.biz/bootadmin/php/theme/less/../images/pattern1.png") !important;
+    background-image: url("./images/pattern1.png") !important;
     background-repeat: repeat;
     
 }
@@ -169,7 +169,7 @@ i:before {
 }
 .col.main-left {
     background-color: #232628;
-    background-image: url("http://mosaicpro.biz/bootadmin/php/theme/less/../images/pattern1.png");
+    background-image: url("./images/pattern1.png");
     background-repeat: repeat;
     margin-left: -8%;
     margin-top: -8px;
@@ -178,7 +178,7 @@ i:before {
 }
 .col.main-left ul li.active {
     background-color: #F4F4F4;
-    background-image: url("http://mosaicpro.biz/bootadmin/php/theme/less/../images/pattern1.png");
+    background-image: url("./images/pattern1.png");
     background-repeat: repeat;
     border-bottom: medium none;
     border-color: #D15353 #D15353 -moz-use-text-color;

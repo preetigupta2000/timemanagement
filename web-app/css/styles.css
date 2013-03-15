@@ -102,7 +102,7 @@ li.center,
 .navbar.main {
   height: 69px;
   background-color: #393d41;
-  background-image: url("httpssssssss://mosaicpro.biz/bootadmin/php/theme/less/../images/pattern2.png");
+  background-image: url("./images/pattern2.png");
   background-repeat: repeat;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.7), 0px 3px 8px rgba(0, 0, 0, 0.1);
   margin: 0;
@@ -737,7 +737,7 @@ li.center,
 }
 .span12.main {
   background-color: #f4f4f4;
-  background-image: url("httpsssssss://mosaicpro.biz/bootadmin/php/theme/less/../images/pattern1.png");
+  background-image: url("./images/pattern1.png");
   background-repeat: repeat;
   z-index: 1;
   position: relative;
@@ -763,7 +763,7 @@ li.center,
 }
 .col.main-left {
   background-color: #232628;
-  background-image: url("httpssssssssss://mosaicpro.biz/bootadmin/php/theme/less/../images/pattern1.png");
+  background-image: url("./images/pattern1.png");
   background-repeat: repeat;
   z-index: 2;
 }
@@ -778,7 +778,7 @@ li.center,
   left: 0;
   width: 100%;
   height: 35px;
-  background: #232628 url("httpsssssssss://mosaicpro.biz/bootadmin/php/theme/less/../images/pattern1.png") repeat;
+  background: #232628 url("./images/pattern1.png") repeat;
   cursor: pointer;
   text-align: center;
   border-top: 1px solid #010101;
@@ -886,7 +886,7 @@ li.center,
   background: #191a1b;
 }
 .col.main-left ul li.hasSubmenu2 ul.collapse li.active {
-  background: #f4f4f4 url("httpssssss://mosaicpro.biz/bootadmin/php/theme/less/../images/pattern1.png") repeat;
+  background: #f4f4f4 url("./images/pattern1.png") repeat;
   -webkit-border-radius: 0 0 0 0;
   -moz-border-radius: 0 0 0 0;
   border-radius: 0 0 0 0;
@@ -920,7 +920,7 @@ li.center,
 }
 .col.main-left ul li.active {
   background-color: #f4f4f4;
-  background-image: url("httpssssss://mosaicpro.biz/bootadmin/php/theme/less/../images/pattern1.png");
+  background-image: url("./images/pattern1.png");
   background-repeat: repeat;
   margin-left: 20px;
   -webkit-border-radius: 10px 0 0 10px;
@@ -3765,7 +3765,6 @@ body.choose ul li span {
 body.choose #choose-preview {
   width: 470px;
   height: 366px;
-  background: url("httpssssssss://mosaicpro.biz/bootadmin/php/theme/less/../images/choose-preview.jpg") no-repeat;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
