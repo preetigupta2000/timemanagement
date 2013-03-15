@@ -37,7 +37,7 @@ function selectTab()
 {
 	
 	var globalTabVariable = jQuery("#globalTabValue").val()
-	var totalLinks = $('ul.tabs').find('li');
+	var totalLinks = $('ul.tabbed-Pane').find('li');
 	jQuery.each(totalLinks, function(i, val) {
 		$(this).removeClass('active');
 	});
@@ -70,6 +70,12 @@ function selectTab()
 		$('a[href=#userTab]').click();
 		$('a[href=#userTab]').parent().addClass('active');
 		$('#userTab').addClass('active');
+	}
+	if(globalTabVariable == "contactTab")
+	{
+		$('a[href=#contactTab]').click();
+		$('a[href=#contactTab]').parent().addClass('active');
+		$('#contactTab').addClass('active');
 	}
 	
 }

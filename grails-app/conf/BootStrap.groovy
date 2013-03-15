@@ -41,17 +41,17 @@ class BootStrap {
 				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change',description:'UI Started').save(failOnError: true)
-				new UserTasksEntry( user:'rn001006', project:'Rashi',task:'Nandkeolyar',noOfHours:'1',comment:'hi')
+				new UserTasksEntry( user:'1012', project:'ISM',task:'Widget',expectedTime:1,actualTime:2)
 				.save(failOnError: true)
   }
   def springsecurityinit = { servletContext ->
-	  def userRole =new Role(authority: 'ROLE_USER').save(failOnError: true, flush: true)
+	//  def userRole =new Role(authority: 'ROLE_USER').save(failOnError: true, flush: true)
 	  def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
-	  def testUser = new User(username: 'test@fn.com', email: 'test@fn.com', enabled: true, password: 'fonantrix')
+	//  def testUser = new User(username: 'test@fn.com', email: 'test@fn.com', enabled: true, password: 'fonantrix')
 	  def adminUser = new User(username: 'admin@fn.com', email: 'admin@fn.com', enabled: true, password: 'admin', isAdmin:true)
+	//  testUser.save(flush: true)
 	  adminUser.save(flush: true)
-	  testUser.save(flush: true)
-	  UserRole.create testUser, userRole, true
+	//  UserRole.create testUser, userRole, true
 	  UserRole.create adminUser, adminRole, true
   }
   

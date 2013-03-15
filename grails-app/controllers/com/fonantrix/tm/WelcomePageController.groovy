@@ -7,8 +7,9 @@ class WelcomePageController {
 
     def viewtable = {
 		def welcome=WelcomePage.list() // list of whole data from the database
-		render(view: "/timeManagement", model: [welcome: welcome,globalTabVar:grailsApplication.config.globalTabVar])
-	}
+		/*render(view: "/timeManagement", model: [welcome: welcome,globalTabVar:grailsApplication.config.globalTabVar])*/
+		render(view: "/userLoginPage", model: [welcome: welcome])
+		}
 	def delete = {
 		def welcome = WelcomePage.get(params.id) // this will get the list of a particular id
 		welcome.delete(flush: true)

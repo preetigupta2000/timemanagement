@@ -24,9 +24,18 @@
                   <li><a href="#">One more separated link</a></li>
                 </ul>
               </li>
-			  <li><a href="#about"><i class="icon-question-sign"></i> Help</a></li>
+			  <li><a href="#about"><i class="icon-question-sign"></i> Help</a></li>			  
+			  <li><a href="/timemanagement">Home</a></li>
+			  <li><g:link controller="logout" action="logout">Logout</g:link></li>
             </ul>
           </div><!--/.nav-collapse -->
       </div>
     </div>
    </div>
+   	<script type="text/javascript">
+function logout()
+{
+	window.location='/timemanagement/Login/index'
+	}
+
+	</script>

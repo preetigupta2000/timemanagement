@@ -4,15 +4,15 @@ class UserTasksEntry {
 	String user;
 	String project;
 	String task;
-	String noOfHours;
-	String comment;
+	int expectedTime;
+	int actualTime;
 		  static constraints={
 		// to get it in the order I want in views
 		user()
 		project()
 		task()
-		noOfHours()
-		comment()
+		expectedTime()
+		actualTime()
 	
 		
 	}

@@ -48,9 +48,13 @@
 <div class="control-group">
 
 <!-- Text input-->
-<label class="control-label" for="input01">No Of Hours</label>
+<label class="control-label" for="input01">Expected Time</label>
 <div class="controls">
-<g:textField name="noOfHours" placeholder="Please enter no of hours" class="input-xlarge" value="${form?.noOfHours}"></g:textField>
+<g:textField name="expectedTime" placeholder="Please enter no of hours" class="input-xlarge" value="${form?.expectedTime}"></g:textField>
+</div>
+<label class="control-label" for="input01">Actual Time</label>
+<div class="controls">
+<g:textField name="actualTime" placeholder="Please enter no of hours" class="input-xlarge" value="${form?.actualTime}"></g:textField>
 </div>
 </div>
 <div class="control-group">

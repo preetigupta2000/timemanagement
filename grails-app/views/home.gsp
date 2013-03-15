@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
 	<meta name="layout" content="mainlayout">
+
   </head>
 
 <body>
@@ -19,7 +20,12 @@
 			<hr/>
         </div>
         <div class="span5">
+        <sec:ifLoggedIn>
+			<g:link controller="welcomePage" action="viewtable"><h2>Welcome <strong>${sec.username()}</strong></h2></g:link>
+			</sec:ifLoggedIn>
+			<sec:ifNotLoggedIn>
 			<g:render template="/includes/login"/>
+			</sec:ifNotLoggedIn>
         </div>
       </div>
 

@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  
-	
-		<g:javascript src="/libs/jquery-1.7.2.min.js"></g:javascript>
-	    <g:javascript src="modal.js"></g:javascript>
   </head>
   <body>
    
@@ -21,6 +17,8 @@
   				<th>User</th>
   				<th>Project</th>
   				<th>Task</th>
+  				<th>Expected Time</th>
+  				<th>Actual time</th>
   				<th>Options</th>
   				
   				
@@ -33,6 +31,8 @@
 	  				<td>${fieldValue(bean:UserTasksEntry, field:'user')}</td>
 	  				<td>${fieldValue(bean:UserTasksEntry, field:'project')}</td>
 	  				<td>${fieldValue(bean:UserTasksEntry, field:'task')}</td>
+	  				<td>${fieldValue(bean:UserTasksEntry, field:'expectedTime')}</td>
+	  				<td>${fieldValue(bean:UserTasksEntry, field:'actualTime')}</td>
 	  				
 	  				 
 	  				<td>
@@ -84,7 +84,23 @@
 </div>
 </div>
 
+<div class="control-group">
 
+<!-- Text input-->
+<label class="control-label" for="input01">Expected Time</label>
+<div class="controls">
+<input type="text" name="expectedTime" class="span3" placeholder="Please enter no of hours">
+</div>
+</div>
+
+<div class="control-group">
+
+<!-- Text input-->
+<label class="control-label" for="input01">Actual Time</label>
+<div class="controls">
+<input type="text" name="actualTime" class="span3" placeholder="Please enter no of hours">
+</div>
+</div>
 <div class="control-group">
 <!-- Button -->
 <div class="controls">

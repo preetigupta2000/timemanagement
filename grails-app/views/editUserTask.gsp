@@ -92,14 +92,14 @@
 			</tr>
 			<tr>
 			<td>
-			<label for="task">No of Hours:</label></td>
-			<td><input type="text" id="noOfHours" name="noOfHours" value="${fieldValue(bean:usertasksentry,field:'noOfHours')}"/>
+			<label for="task">Expected Time:</label></td>
+			<td><input type="text" id="expectedTime" name="expectedTime" class="span3" value="${fieldValue(bean:usertasksentry,field:'expectedTime')}"/>
 			</td>
 			</tr>
 			<tr>
 			<td>
-			<label for="lastname">Comment:</label></td>
-			<td><textarea cols="40" rows="2" id="comment" name="comment" >${fieldValue(bean:usertasksentry,field:'comment')}</textarea>
+			<label for="lastname">Actual Time</label></td>
+			<td><input type="text" id="actualTime" name="actualTime" class="span3" value="${fieldValue(bean:usertasksentry,field:'actualTime')}"/>
 			</td>
 			</tr>
 		    </tbody>
