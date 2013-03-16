@@ -14,28 +14,6 @@
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css">
 	--%>	
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'styles.css')}" type="text/css">
-	<style type="text/css">
-.modal-body {
-    max-height: 400px;
-    overflow: hidden;
-    padding: 15px;
-    background-image: url(./images/regisBack.jpg)
-}
-
-.registerImage{
-color:silver !important;
-font-size: 25px;
-    font-family: Comic Sans MS;
-    font-weight: bold;
-}
-
-[class*="span1"] {
-    float: left;
-    margin-left: 0px;
-    min-height: 1px;
-}	
-
-</style>
 	
   </head>
 
@@ -119,7 +97,7 @@ font-size: 25px;
 
 
 		
-					<div class="span3 "> 
+					<div class="span3"> 
 							<input type="text" name="userName" placeholder="Username">
 							<input type="password" name="password" placeholder="Password">
 							<input type="password" name="cPassword" placeholder="Cofirm Password">
@@ -128,7 +106,7 @@ font-size: 25px;
 							<button type="submit" class="btn span1">Register<i></i></button> 
 					</div>
 
-					<div class="registerImage">What Level of Time Management are You At ?<br/><br/>Register and Explore.</div>
+					<div class="registerImage hidden-phone">What Level of Time Management are You At ?<br/><br/>Register and Explore.</div>
 					
 
 
