@@ -8,7 +8,6 @@
 <g:javascript src="../js/highcharts.js"></g:javascript>
 <g:javascript src="../js/gray.js"></g:javascript>
 <g:javascript src="modal.js"></g:javascript>
-<link rel="stylesheet" type="text/css" href="../css/jquery-ui-1.8.21.css" />
 </head>
 <body>
 	<g:hiddenField id="globalTabValue" name="globalTabValue"
