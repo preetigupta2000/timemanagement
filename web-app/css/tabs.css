@@ -172,7 +172,7 @@ i:before {
     background-image: url("../images/pattern1.png");
     background-repeat: repeat;
     margin-left: -8%;
-    margin-top: -8px;
+    margin-top: 3%;
     padding-top: 25px;
     z-index: 2;
 }
@@ -237,7 +237,7 @@ li>a{
 
 .tab-content {
     margin-left: 17%;
-    margin-top: 2%;
+    margin-top: 6%;
 }
 
 .container{

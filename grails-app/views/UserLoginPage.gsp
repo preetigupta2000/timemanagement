@@ -11,7 +11,7 @@
    </head>
    <body>
       <g:hiddenField id="globalTabValue" name="globalTabValue" value="${globalTabVar}"></g:hiddenField>
-      <div class="container maincontainer">
+      <div class="row-fluid">
          <div class="span2 col main-left menu-large">
             <div style="overflow: hidden;" class="rrow scroll-y-left">
                <div style="width: auto; transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) scale(1) translateZ(0px);" class="iScrollWrapper">
@@ -36,7 +36,7 @@
                </div>
             </div>
          </div>
-         <div class="tab-content">
+         <div class="span9 tab-content">
             <div id="userTaskEntryTab" class="tab-pane"></div>
             <div id="clientTab" class="tab-pane"></div>
             <div id="contactTab" class="tab-pane"></div>
