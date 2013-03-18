@@ -1,4 +1,4 @@
 <footer>
-  	<hr/>
+  	<hr>
        <center>&copy;, Fonantrix Solutions</center>
 </footer>

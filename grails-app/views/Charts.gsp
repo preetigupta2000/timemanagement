@@ -103,7 +103,7 @@ function draw()
 </head>
 
 <body>
-	  <div class="container" style="width: 100%">
+	  <div style="width: 100%">
 	 	<label>Select a chart : </label>
 		<select id="chart" onchange="draw();">
 				<option value="column">Column</option>
