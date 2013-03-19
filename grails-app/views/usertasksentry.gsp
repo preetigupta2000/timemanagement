@@ -3,7 +3,7 @@
    <head>
    </head>
    <body>
-      <div class="row">
+      <div class="row-fluid">
          <a type="button" class="btn span2" href="#test_modal_project" data-toggle="modal">Add a user task entry</a>
       
       <g:if test="${flash.message}">
