@@ -179,6 +179,7 @@ a:hover {
   border-radius: 500px;
 }
 .row {
+  margin-left: -20px;
   *zoom: 1;
 }
 .row:before,
@@ -283,6 +284,7 @@ a:hover {
   margin-left: 100px;
 }
 .row {
+  margin-left: -20px;
   *zoom: 1;
 }
 .row:before,
@@ -938,7 +940,7 @@ h4 small {
 ul,
 ol {
   padding: 0;
-  margin: 0 0 0 10%;
+  margin: 0 0 10px 25px;
 }
 ul ul,
 ul ol,
@@ -6346,6 +6348,7 @@ footer {
 }
 @media (min-width: 1200px) {
   .row {
+    margin-left: -30px;
     *zoom: 1;
   }
   .row:before,
@@ -6450,6 +6453,7 @@ footer {
     margin-left: 130px;
   }
   .row {
+    margin-left: -30px;
     *zoom: 1;
   }
   .row:before,
@@ -7019,6 +7023,7 @@ footer {
 }
 @media (min-width: 768px) and (max-width: 979px) {
   .row {
+    margin-left: -20px;
     *zoom: 1;
   }
   .row:before,
@@ -7123,6 +7128,7 @@ footer {
     margin-left: 82px;
   }
   .row {
+    margin-left: -20px;
     *zoom: 1;
   }
   .row:before,
