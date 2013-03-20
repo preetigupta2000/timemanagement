@@ -8,11 +8,12 @@
       <g:javascript src="../js/highcharts.js"></g:javascript>
       <g:javascript src="../js/gray.js"></g:javascript>
       <g:javascript src="modal.js"></g:javascript>
+      <link rel="stylesheet" href="${resource(dir: 'css', file: 'tablet.css')}" type="text/css">
    </head>
    <body>
       <g:hiddenField id="globalTabValue" name="globalTabValue" value="${globalTabVar}"></g:hiddenField>
       <div class="row-fluid">
-         <div class="span2 col main-left menu-large">
+         <div id="menu" class="span2 col main-left menu-large">
             <div style="overflow: hidden;" class="rrow scroll-y-left">
                <div style="width: auto; transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) scale(1) translateZ(0px);" class="iScrollWrapper">
                   <ul class="tabbed-Pane" style="display: block;">

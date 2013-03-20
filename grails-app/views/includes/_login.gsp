@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css">
 	--%>	
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'styles.css')}" type="text/css">
+	<link rel="stylesheet" href="${resource(dir: 'css', file: 'tablet.css')}" type="text/css">
 	
   </head>
 
@@ -103,7 +104,7 @@
 							<input type="password" name="cPassword" placeholder="Cofirm Password">
 							<input type="text" name="address" placeholder="Address">
 							<input type="text" name="email" placeholder="Email">
-							<button type="submit" class="btn span1">Register<i></i></button> 
+							<button type="submit" id="submitButton" class="btn span1">Register<i></i></button> 
 					</div>
 
 					<div class="registerImage hidden-phone">What Level of Time Management are You At ?<br/><br/>Register and Explore.</div>
