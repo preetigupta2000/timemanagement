@@ -41,8 +41,15 @@ class BootStrap {
 				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change', description:'UI Started').save(failOnError: true)
 				new ClientPage( name:'Sea_Change',description:'UI Started').save(failOnError: true)
-				new UserTasksEntry( user:'1012', project:'ISM',task:'Widget',expectedTime:1,actualTime:2)
-				.save(failOnError: true)
+				new UserTasksEntry( user:'1012', project:'ISM',task:'Jasper',expectedTime:3,actualTime:2).save(failOnError: true)
+				new UserTasksEntry( user:'1013', project:'ISM',task:'Report',expectedTime:5,actualTime:8).save(failOnError: true)
+				new UserTasksEntry( user:'1014', project:'IVM',task:'Jasper',expectedTime:2,actualTime:2).save(failOnError: true)
+				new UserTasksEntry( user:'1015', project:'IVM',task:'Widget',expectedTime:4,actualTime:7).save(failOnError: true)
+				new UserTasksEntry( user:'1016', project:'Widgets',task:'Widget',expectedTime:8,actualTime:6).save(failOnError: true)
+				new UserTasksEntry( user:'1017', project:'Widgets',task:'Widget',expectedTime:6,actualTime:8).save(failOnError: true)
+				new UserTasksEntry( user:'1018', project:'MMC-Config',task:'DGW',expectedTime:7,actualTime:9).save(failOnError: true)
+				new UserTasksEntry( user:'1019', project:'MMC-Config',task:'DGW',expectedTime:4,actualTime:2).save(failOnError: true)
+				
   }
   def springsecurityinit = { servletContext ->
 	//  def userRole =new Role(authority: 'ROLE_USER').save(failOnError: true, flush: true)
