@@ -1,4 +1,5 @@
-	jQuery(document).ready(function() {
+
+jQuery(document).ready(function() {
 		jQuery('a[data-confirm]').click(function(ev) {
 	        var href = jQuery(this).attr('href');
 
@@ -11,3 +12,14 @@
 	        return false;
 	    });
 	});
+	
+	var flag=1;
+	function addToggle(){
+	    var winWidth = $(window).width();
+	    if(winWidth<480)
+	    	{
+	    	jQuery('#menu').slideToggle();
+	    	}
+
+	}
+	

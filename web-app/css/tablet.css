@@ -3,7 +3,7 @@
 @media (min-width: 768px) and (max-width: 979px) {
 	
 	div.registerImage {
-					 float: right !important;
+					 float: inherit !important;
 				     font-size: 12px !important;
 	}
 	#submitButton{
@@ -12,7 +12,15 @@
      			  
     #menu{
     margin-top: -3% !important;
+    display:block !important;
 			}			  
 
+.span3{
+    width: 50% !important;
+			}	
+			
+			  .hidden_menu{
+  display:none;
+  }
 
 }

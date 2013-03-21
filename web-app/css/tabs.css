@@ -250,3 +250,12 @@ li>a{
     margin: 15px auto;
     width: 820px;
 }
+
+@media (min-width: 1200px) {
+  .hidden_menu{
+  display:none;
+  }
+  #menu{
+  display:block !important;
+  }
+}

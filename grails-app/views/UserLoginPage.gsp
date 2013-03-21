@@ -9,23 +9,29 @@
       <g:javascript src="../js/gray.js"></g:javascript>
       <g:javascript src="modal.js"></g:javascript>
       <link rel="stylesheet" href="${resource(dir: 'css', file: 'tablet.css')}" type="text/css">
+      <link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+
    </head>
    <body>
+  <div id="hidden_menu" class="hidden_menu navbar navbar-inverse navbar-fixed-top"><a id="collapsableMenu" class="btn btn-navbar"  data-toggle="collapse" onclick="addToggle();">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</a></div>
       <g:hiddenField id="globalTabValue" name="globalTabValue" value="${globalTabVar}"></g:hiddenField>
       <div class="row-fluid">
          <div id="menu" class="span2 col main-left menu-large">
             <div style="overflow: hidden;" class="rrow scroll-y-left">
-               <div style="width: auto; transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) scale(1) translateZ(0px);" class="iScrollWrapper">
+               <div style="width: auto; transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) scale(1) translateZ(0px);" class="iScrollWrapper ">
                   <ul class="tabbed-Pane" style="display: block;">
                      <li class="glyphicons home currentScroll active"><a href="#userTaskEntryTab" data-toggle="tab"
-                        onclick="showPage('/timemanagement/UserTaskEntry/viewUserTasks','userTaskEntryTab');setTabValue('/timemanagement/UserTaskEntry/setTabVarValue');"><span>User
+                        onclick="showPage('/timemanagement/UserTaskEntry/viewUserTasks','userTaskEntryTab');setTabValue('/timemanagement/UserTaskEntry/setTabVarValue');addToggle();"><span>User
                         Task Entry</span><i class="icon-user"></i></a>
                      </li>
                      <li class="glyphicons coins"><a href="#clientTab" data-toggle="tab"
-                        onclick="showPage('/timemanagement/Chart/viewtable','clientTab');setTabValue('/timemanagement/Chart/setTabVarValue');"><span>Dashboard</span><i
+                        onclick="showPage('/timemanagement/Chart/viewtable','clientTab');setTabValue('/timemanagement/Chart/setTabVarValue');addToggle();"><span>Dashboard</span><i
                         class="icon-tasks"></i></a></li>
                      <li class="glyphicons coins"><a href="#contactTab" data-toggle="tab"
-                        onclick="showPage('/timemanagement/Contact/contactdetails','contactTab');setTabValue('/timemanagement/Contact/setTabVarValue');"><span>Contact</span><i
+                        onclick="showPage('/timemanagement/Contact/contactdetails','contactTab');setTabValue('/timemanagement/Contact/setTabVarValue');addToggle();"><span>Contact</span><i
                         class="icon-briefcase"></i></a></li>
                   </ul>
                </div>

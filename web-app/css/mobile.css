@@ -79,4 +79,33 @@
 	.error ul {
 		margin-left: 0;
 	}
+	    #menu{
+    margin-top: -8% !important;
+			}	
+			
+	.modal.fade {
+  				  top: 380px;
+				}
+						
+	.modal-body {
+    				max-height: 250px !important;
+    				overflow: auto !important;
+    				padding: 15px !important;
+				}
+				
+	.hidden_menu{
+  display:block;
+  background-image: url(../images/hidden_menu.jpg);
+    height: 23px;
+	width:100%;
+    background-repeat: repeat-x;
+    margin-top: -20px;
+  }
 }
+a#collapsableMenu{
+	
+	margin-bottom: 0px !important;
+	margin-top: 0px !important;
+	margin-right: 9px !important;
+}
+
